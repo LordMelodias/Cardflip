@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alaram</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div class="section">
+        <div class="container">
+            <div class="row full-height justify-content-center">
+                <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                    <h5 class="heading mb-0 pb-3"><span>Clock / </span><span>Google</span></h5>
+
+                    <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/><label for="reg-log"></label>
+
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+
+                            <div class="card-front">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                    
+
+                                        <div id = "MyClockDisplay" class = "clock" onload = "showTime()"> </div>  
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-back">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                        <h5 class="mb-5 pb-39 text">Google</h5>
+
+                                        <section>
+                                            <input id="searchBox" type="text" name="searchBox" value="" onchange="SearchQuery(this.value)">
+                                            <a id="searchButton" href="https://www.google.co.uk/" target="_blank" onclick="buttonClick()">Search with Google</p>
+                                        <section>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function SearchQuery(val) {
+        document.getElementById("searchButton").href = "https://www.google.com/search?q=" + val;
+        }
+    
+        function buttonClick(){
+        document.getElementById("searchBox").value = "";
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

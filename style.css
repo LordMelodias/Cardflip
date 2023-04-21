@@ -1,0 +1,125 @@
+body {   
+    text-align: center;  
+    padding: 20px;  
+    background-color: #F8F9FA;  
+    background-size: 1800% 1800%;  
+    font-family: "Lucida Console", "Courier New", monospace; 
+}  
+
+
+.clock{  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    padding-top: 15px;  
+    transform: translateX(-50%) translateY(-50%);  
+    color: #ebe4ec;  
+    font-size: 60px;  
+    font-family: Orbitron;  
+    letter-spacing: 7px;  
+}  
+
+/**************Card CSS Start*************/
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+        position: relative;
+        display: block;
+        text-align: center;
+        width: 60px;
+        height: 16px;
+        border-radius: 8px;
+        padding: 0;
+        margin: 10px auto;
+        cursor: pointer;
+        background-color: #ffeba7;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+        position: absolute;
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        color: #d9e5e6;
+        background-color: #701060;
+        font-family: 'unicons';
+        content: '\eb4f';
+        z-index: 20;
+        top: -10px;
+        left: -10px;
+        line-height: 36px;
+        text-align: center;
+        font-size: 24px;
+        transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+    transform: translateX(44px) rotate(-270deg);
+}
+
+
+.card-3d-wrap {
+        position: relative;
+        width: 540px;
+        max-width: 100%;
+        height: 500px;
+        transform-style: preserve-3d;
+        perspective: 800px;
+        margin-top: 10%;
+        margin-bottom: 20%;
+        
+}
+.card-3d-wrapper {
+        width: 100%;
+        height: 100%;
+        position:absolute;    
+        top: 0;
+        left: 0;  
+        transform-style: preserve-3d;
+        transition: all 600ms ease-out; 
+}
+.card-front, .card-back {
+        width: 100%;
+        height: 100%;
+        background-color: #2a2b38;
+        background-image: url('wall.jpg');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: 400%;
+        position: absolute;
+        border-radius: 10px;
+        left: 0;
+        top: 0;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+}
+.card-back {
+    transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+    transform: rotateY(180deg);
+}
+.center-wrap{
+        position: absolute;
+        width: 100%;
+        padding: 0 35px;
+        top: 50%;
+        left: 0;
+        transform: translate3d(0, -50%, 35px) perspective(100px);
+        z-index: 20;
+        display: block;
+}
+
+.text{
+    color: white;
+}
+
+.gcse-search{
+    margin-bottom: 10%!important;
+}
+/**************Card Section End****************/
+
+
